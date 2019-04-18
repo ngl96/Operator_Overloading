@@ -1,5 +1,5 @@
 // Created by: Nathanael Leyton
-// rec08
+
 #include "Rational.hpp"
 #include <iostream>
 
@@ -53,12 +53,6 @@ int main() {
     cout << "a++ ++ = " << (a++ ++) << endl;
     cout << "a = " << a << endl;
     
-    // Even though the above example, (a++ ++), compiled, the
-    // following shouldn't.
-    // But some compiler vendors might let it...  Is your compiler
-    // doing the right thing?
-    // cout << "a-- -- = " << (a-- --) << endl;
-    // cout << "a = " << a << endl;
     
     if (Rational(1)) {
         cout << "1 is true" << endl;
