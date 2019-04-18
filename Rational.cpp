@@ -1,13 +1,11 @@
 //  Rational.cpp
 //  Created by Nathanael Leyton on 10/25/18.
-//  rec08
 
 
 #include "Rational.hpp"
 using namespace std;
 
 namespace CS2124 {
-    // Non Member, friend.
     ostream& operator<<(ostream& os, const Rational& rhs) {
         os << rhs.numerator << '/' << rhs.denominator << endl;
         return os;
@@ -25,8 +23,7 @@ namespace CS2124 {
         if ( (lhs.numerator * rhs.denominator) < (rhs.numerator * lhs.denominator)) { return true; }
         return false;
     }
-    // Member.
-    // You have to remove the defaults when doing seperate compilation in the cpp.// This note is for me.
+
     Rational::Rational(int aNumerator, int aDenominator): numerator(aNumerator), denominator(aDenominator) {
         normalize();
     }
@@ -51,7 +48,6 @@ namespace CS2124 {
         numerator += denominator;
         return original;
     }
-    // C++ knows to convert numerator to a bool and automatically compares it.
     Rational::operator bool() const {return numerator;}
     bool operator!=(const Rational& lhs, const Rational& rhs){
         return !(lhs ==rhs);
@@ -63,7 +59,6 @@ namespace CS2124 {
     Rational operator--(Rational& lhs, int dummy){ // post
         Rational original = lhs;
         lhs += -1;
-        //
         return original;
     }
     Rational operator+(const Rational& lhs, const Rational& rhs) {
