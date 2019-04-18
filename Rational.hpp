@@ -1,6 +1,4 @@
-//
 //  Rational.hpp
-//  rec08
 //
 //  Created by Nathanael Leyton on 10/25/18.
 //  Copyright © 2018 Nathanael Leyton. All rights reserved.
@@ -20,7 +18,6 @@ namespace CS2124 {
         Rational& operator+=(const Rational& rhs);
         Rational& operator++();
         Rational operator++(int dummy);
-        // C++ knows to convert numerator to a bool and automatically compares it.
         explicit operator bool() const;
     private:
         int numerator, denominator;
